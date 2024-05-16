@@ -1022,25 +1022,6 @@ body .footer-cart .button-your-cart {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[\#ff3131bc\]:hover {
-  background-color: #ff3131bc;
-}
-
-.hover\:bg-\[\#ed5f5f\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(237 95 95 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-\[\#de4a4a\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(222 74 74 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-\[\#f85e5e\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 94 94 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-red-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));

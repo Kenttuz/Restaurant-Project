@@ -1,1 +1,37 @@
-console.log('Hello moto')
+document.addEventListener('DOMContentLoaded', function () {
+    const CartBtn = document.getElementById('CartBtn')
+    const ModalCart = document.getElementById('ModalCart')
+    const closeModalBtn = document.getElementById('closeModalBtn')
+    const Menu = document.getElementById('Menu')
+    const Drinks = document.getElementById('Drinks')
+    const CartAccount = document.getElementById('CartAccount')
+    const CartItems = document.getElementById('CartItems')
+    const CartTotal = document.getElementById('CartTotal')
+    const AddressInput = document.getElementById('AddressInput')
+    const AddressWarning = document.getElementById('AddressWarning')
+    const checkoutBtn = document.getElementById('checkoutBtn')
+
+    CartBtn.addEventListener('click', function () {
+        ModalCart.style.display = 'flex'
+    })
+
+    ModalCart.addEventListener('click', function (event) {
+        if (event.target === ModalCart) {
+            ModalCart.style.display = 'none'
+        }
+    })
+
+    closeModalBtn.addEventListener('click', function () {
+        ModalCart.style.display = 'none'
+    })
+
+    Menu.addEventListener('click', function (event) {
+        let parentButton = event.target.closest('.add-btn-cart')
+
+        if (parentButton) {
+            const name = parentButton.getAttribute('data-name')
+            const price = parentButton.getAttribute('data-price')
+            console.log(name, price)
+        }
+    })
+})
