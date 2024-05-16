@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: #f6f7f8;
+  font-family: "Poppins", sans-seri;
+}
+@media (max-width: 768px) {
+  body #Menu .product-card .product-card-image-refri {
+    width: 6.75rem;
+    height: 6.75rem;
+  }
+}
+body #Menu .product-card .product-card-info {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  body #Menu .product-card .product-card-info {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 768px) {
+  body #Menu .product-card .product-card-info .product-card-title a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  body #Menu .product-card .product-card-info .card-subtitle p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 768px) {
+  body #Menu .product-card .product-card-info .product-card-price span {
+    font-size: 16px;
+  }
+}
+body #Menu .product-card .button-cart {
+  background: #030712;
+  transition-duration: 120ms;
+}
+body #Menu .product-card .button-cart:hover {
+  background: #0d193a;
+}
+body .banner-header {
+  background-image: url("/assets/images/bg.png");
+}
+@media (max-width: 425px) {
+  body .banner-header {
+    background-image: url("./../../assets/images/bg-mobile.png");
+  }
+}
+body .banner-header #opening-hours {
+  background: #54cc0a;
+}
+body .footer-cart .button-your-cart {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

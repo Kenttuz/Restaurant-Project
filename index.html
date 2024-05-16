@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./style/output.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <title>Forza Hamburguer</title>
+    </head>
+    <body>
+        <header
+            class="banner-header w-full h-[456px] bg-cover bg-no-repeat bg-center"
+        >
+            <div
+                class="container mx-auto flex flex-col w-full h-full justify-center items-center"
+            >
+                <div>
+                    <img
+                        src="/assets/images/hamb-1.png"
+                        alt="Logo Hamburguer"
+                        class="w-44 h-44 rounded-full shadow-lg hover:scale-75 transition delay-100 duration-250"
+                    />
+                </div>
+                <h1
+                    class="title-header font-bold text-white mt-8 mb-1 text-2xl md:text-3xl text-center"
+                >
+                    Forza Hamburguer
+                </h1>
+                <p class="address text-white text-base mt-2 text-center">
+                    Rua Forza Dev, 12, Porto Alegre, RS
+                </p>
+                <div id="opening-hours" class="px-5 py-1.5 rounded mt-4">
+                    <p class="font-medium text-white text-lg text-center">
+                        Seg a Dom - 10:00 às 22:00
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <div id="Menu" class="container mx-auto mb-7">
+            <h2
+                class="subtitle-menu text-black text-xl md:text-4xl font-bold text-center mt-11 mb-8"
+            >
+                Conheça nosso menu
+            </h2>
+            <main>
+                <section
+                    class="grid grid-cols-1 md:grid-cols-2 mx-auto max-md:gap-6 gap-x-12 gap-y-9 max-w-7xl"
+                >
+                    <div class="product-card flex gap-2 max-md:mx-3">
+                        <img
+                            class="product-card-image h-36 w-36 rounded hover:scale-75 hover:rotate-2 transition delay-100 duration-300"
+                            src="/assets/images/hamb-2.png"
+                            alt="Hamburguer Smash"
+                            data-name="Hamburguer Smash"
+                            data-price="35.00"
+                        />
+                        <div class="product-card-info gap-2 mt-1">
+                            <div class="product-card-title">
+                                <a
+                                    href="#"
+                                    class="font-bold text-black text-sm md:text-lg"
+                                    >Cheese Burger Duplo</a
+                                >
+                            </div>
+                            <div class="card-subtitle mb-2">
+                                <p class="text-black text-base text-justify">
+                                    Pão levinho de fermentação natural da
+                                    Trigou, burger 160g, queijo prato e maionese
+                                    da casa
+                                </p>
+                            </div>
+                            <div
+                                class="product-card-price flex justify-between"
+                            >
+                                <span class="text-black font-bold text-lg">
+                                    R$ 35,00</span
+                                >
+                                <button
+                                    class="button-cart add-btn-cart px-4 md:px-5 rounded-md"
+                                >
+                                    <i
+                                        class="fa fa-cart-plus text-base md:text-lg text-white"
+                                    ></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card flex gap-2 max-md:mx-3">
+                        <img
+                            class="product-card-image h-36 w-36 rounded hover:scale-75 hover:rotate-2 transition delay-100 duration-300"
+                            src="/assets/images/hamb-3.png"
+                            alt="Smash Burger"
+                            data-name="Smash Burger"
+                            data-price="26.90"
+                        />
+                        <div
+                            class="product-card-info flex justify-between gap-4 mt-1"
+                        >
+                            <div>
+                                <div class="product-card-title">
+                                    <a
+                                        href="#"
+                                        class="font-bold text-black text-lg"
+                                        >Smash Burger</a
+                                    >
+                                </div>
+                                <div class="card-subtitle mb-2">
+                                    <p
+                                        class="text-black text-base text-justify"
+                                    >
+                                        Pão levinho de fermentação natural da
+                                        Trigou, burger 160g, queijo prato e
+                                        maionese da casa
+                                    </p>
+                                </div>
+                                <div
+                                    class="product-card-price flex justify-between"
+                                >
+                                    <span class="text-black font-bold text-lg">
+                                        R$ 26,90</span
+                                    >
+                                    <button
+                                        class="button-cart add-btn-cart px-5 rounded-md"
+                                    >
+                                        <i
+                                            class="fa fa-cart-plus text-lg text-white"
+                                        ></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card flex gap-2 max-md:mx-3">
+                        <img
+                            class="product-card-image h-36 w-36 rounded hover:scale-75 hover:rotate-2 transition delay-100 duration-300"
+                            src="/assets/images/hamb-1.png"
+                            alt="Beef Burger Duplo"
+                            data-name="Beef Burger Duplo"
+                            data-price="32.00"
+                        />
+                        <div
+                            class="product-card-info flex justify-between gap-4 mt-1"
+                        >
+                            <div>
+                                <div class="product-card-title">
+                                    <a
+                                        href="#"
+                                        class="font-bold text-black text-lg"
+                                        >Beef Burger Duplo</a
+                                    >
+                                </div>
+                                <div class="card-subtitle mb-2">
+                                    <p
+                                        class="text-black text-base text-justify"
+                                    >
+                                        Pão levinho de fermentação natural da
+                                        Trigou, burger 160g, queijo prato e
+                                        maionese da casa
+                                    </p>
+                                </div>
+                                <div
+                                    class="product-card-price flex justify-between"
+                                >
+                                    <span class="text-black font-bold text-lg">
+                                        R$ 32,00</span
+                                    >
+                                    <button
+                                        class="button-cart add-btn-cart px-5 rounded-md"
+                                    >
+                                        <i
+                                            class="fa fa-cart-plus text-lg text-white"
+                                        ></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card flex gap-2 max-md:mx-3">
+                        <img
+                            class="product-card-image h-36 w-36 rounded hover:scale-75 hover:rotate-2 transition delay-100 duration-300"
+                            src="/assets/images/hamb-8.png"
+                            alt="Extra Plant Burger"
+                            data-name="Extra Plant Burger"
+                            data-price="45.00"
+                        />
+                        <div
+                            class="product-card-info flex justify-between gap-4 mt-1"
+                        >
+                            <div>
+                                <div class="product-card-title">
+                                    <a
+                                        href="#"
+                                        class="font-bold text-black text-lg"
+                                        >Extra Plant Burger</a
+                                    >
+                                </div>
+                                <div class="card-subtitle mb-2">
+                                    <p
+                                        class="text-black text-base text-justify"
+                                    >
+                                        Pão levinho de fermentação natural da
+                                        Trigou, burger 160g, queijo prato e
+                                        maionese da casa
+                                    </p>
+                                </div>
+                                <div
+                                    class="product-card-price flex justify-between"
+                                >
+                                    <span class="text-black font-bold text-lg">
+                                        R$45,00</span
+                                    >
+                                    <button
+                                        class="button-cart add-btn-cart px-5 rounded-md"
+                                    >
+                                        <i
+                                            class="fa fa-cart-plus text-lg text-white"
+                                        ></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card flex gap-2 max-md:mx-3">
+                        <img
+                            class="product-card-image h-36 w-36 rounded hover:scale-75 hover:rotate-2 transition delay-100 duration-300"
+                            src="/assets/images/hamb-4.png"
+                            alt="Chicken Burger"
+                            data-name="Chicken Burger"
+                            data-price="40.00"
+                        />
+                        <div
+                            class="product-card-info flex justify-between gap-4 mt-1"
+                        >
+                            <div>
+                                <div class="product-card-title">
+                                    <a
+                                        href="#"
+                                        class="font-bold text-black text-lg"
+                                        >Chicken Burger</a
+                                    >
+                                </div>
+                                <div class="card-subtitle mb-2">
+                                    <p
+                                        class="text-black text-base text-justify"
+                                    >
+                                        Pão levinho de fermentação natural da
+                                        Trigou, burger 160g, queijo prato e
+                                        maionese da casa
+                                    </p>
+                                </div>
+                                <div
+                                    class="product-card-price flex justify-between"
+                                >
+                                    <span class="text-black font-bold text-lg">
+                                        R$40,00</span
+                                    >
+                                    <button
+                                        class="button-cart add-btn-cart px-5 rounded-md"
+                                    >
+                                        <i
+                                            class="fa fa-cart-plus text-lg text-white"
+                                        ></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card flex gap-2 max-md:mx-3">
+                        <img
+                            class="product-card-image h-36 w-36 rounded hover:scale-75 hover:rotate-2 transition delay-100 duration-300"
+                            src="/assets/images/hamb-5.png"
+                            alt="Rump Steak Burguer"
+                            data-name="Rump Steak Burguer"
+                            data-price="49.90"
+                        />
+                        <div
+                            class="product-card-info flex justify-between gap-4 mt-1"
+                        >
+                            <div>
+                                <div class="product-card-title">
+                                    <a
+                                        href="#"
+                                        class="font-bold text-black text-lg"
+                                        >Rump Steak Burguer</a
+                                    >
+                                </div>
+                                <div class="card-subtitle mb-2">
+                                    <p
+                                        class="text-black text-base text-justify"
+                                    >
+                                        Pão levinho de fermentação natural da
+                                        Trigou, burger 160g, queijo prato e
+                                        maionese da casa
+                                    </p>
+                                </div>
+                                <div
+                                    class="product-card-price flex justify-between"
+                                >
+                                    <span class="text-black font-bold text-lg">
+                                        R$ 49,90</span
+                                    >
+                                    <button
+                                        class="button-cart add-btn-cart px-5 rounded-md"
+                                    >
+                                        <i
+                                            class="fa fa-cart-plus text-lg text-white"
+                                        ></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card flex gap-2 max-md:mx-3">
+                        <img
+                            class="product-card-image h-36 w-36 rounded hover:scale-75 hover:rotate-2 transition delay-100 duration-300"
+                            src="/assets/images/hamb-6.png"
+                            alt="Onion Burger Duplo"
+                            data-name="Onion Burger Duplo"
+                            data-price="29.90"
+                        />
+                        <div
+                            class="product-card-info flex justify-between gap-4 mt-1"
+                        >
+                            <div>
+                                <div class="product-card-title">
+                                    <a
+                                        href="#"
+                                        class="font-bold text-black text-lg"
+                                        >Onion Burger Duplo</a
+                                    >
+                                </div>
+                                <div class="card-subtitle mb-2">
+                                    <p
+                                        class="text-black text-base text-justify"
+                                    >
+                                        Pão levinho de fermentação natural da
+                                        Trigou, burger 160g, queijo prato e
+                                        maionese da casa
+                                    </p>
+                                </div>
+                                <div
+                                    class="product-card-price flex justify-between"
+                                >
+                                    <span class="text-black font-bold text-lg">
+                                        R$ 29,90</span
+                                    >
+                                    <button
+                                        class="button-cart add-btn-cart px-5 rounded-md"
+                                    >
+                                        <i
+                                            class="fa fa-cart-plus text-lg text-white"
+                                        ></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card flex gap-2 max-md:mx-3">
+                        <img
+                            class="product-card-image h-36 w-36 rounded hover:scale-75 hover:rotate-2 transition delay-100 duration-300"
+                            src="/assets/images/hamb-7.png"
+                            alt="Nuggets Burger"
+                            data-name="Nuggets Burger"
+                            data-price="23.00"
+                        />
+                        <div
+                            class="product-card-info flex justify-between gap-4 mt-1"
+                        >
+                            <div>
+                                <div class="product-card-title">
+                                    <a
+                                        href="#"
+                                        class="font-bold text-black text-lg"
+                                        >Nuggets Burger</a
+                                    >
+                                </div>
+                                <div class="card-subtitle mb-2">
+                                    <p
+                                        class="text-black text-base text-justify"
+                                    >
+                                        Pão levinho de fermentação natural da
+                                        Trigou, burger 160g, queijo prato e
+                                        maionese da casa
+                                    </p>
+                                </div>
+                                <div
+                                    class="product-card-price flex justify-between"
+                                >
+                                    <span class="text-black font-bold text-lg">
+                                        R$ 23,00</span
+                                    >
+                                    <button
+                                        class="button-cart add-btn-cart px-5 rounded-md"
+                                    >
+                                        <i
+                                            class="fa fa-cart-plus text-lg text-white"
+                                        ></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="Drinks" class="mb-24">
+                    <div class="container mx-auto px-2 mt-10 mb-2">
+                        <h2
+                            class="font-bold text-black text-2xl md:text-3xl text-left md:text-center mb-8"
+                        >
+                            Bebidas
+                        </h2>
+                        <div
+                            id="Menu"
+                            class="grid grid-cols-1 md:grid-cols-2 mx-auto max-md:gap-6 gap-x-12 gap-y-9 max-w-7xl"
+                        >
+                            <div class="product-card flex gap-2">
+                                <img
+                                    class="product-card-image-refri h-36 w-36 rounded hover:scale-75 hover:rotate-3 transition delay-100 duration-300"
+                                    src="/assets/images/refri-1.png"
+                                    alt="Coca Cola Lata"
+                                    data-name="Coca Cola Lata"
+                                    data-price="6.00"
+                                />
+                                <div class="product-card-info gap-4 mt-1">
+                                    <div class="product-card-title mb-2">
+                                        <a
+                                            href="#"
+                                            class="font-bold text-black text-lg"
+                                            >Coca Cola Lata</a
+                                        >
+                                    </div>
+                                    <div
+                                        class="product-card-price flex md:justify-between"
+                                    >
+                                        <span
+                                            class="text-black font-bold text-lg max-md:pr-8"
+                                        >
+                                            R$ 5,00</span
+                                        >
+                                        <button
+                                            class="button-cart add-btn-cart px-5 rounded-md"
+                                        >
+                                            <i
+                                                class="fa fa-cart-plus text-lg text-white"
+                                            ></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card flex gap-2">
+                                <img
+                                    class="product-card-image-refri h-36 w-36 rounded hover:scale-75 hover:rotate-3 transition delay-100 duration-300"
+                                    src="/assets/images/refri-2.png"
+                                    alt="Guaraná Antarctica"
+                                    data-name="Guaraná Antarctica"
+                                    data-price="5.00"
+                                />
+                                <div class="product-card-info gap-4 mt-1">
+                                    <div class="product-card-title mb-2">
+                                        <a
+                                            href="#"
+                                            class="font-bold text-black text-lg"
+                                            >Guaraná Antarctica</a
+                                        >
+                                    </div>
+                                    <div
+                                        class="product-card-price flex md:justify-between"
+                                    >
+                                        <span
+                                            class="text-black font-bold text-lg max-md:pr-8"
+                                        >
+                                            R$ 5,00</span
+                                        >
+                                        <button
+                                            class="button-cart add-btn-cart px-5 rounded-md"
+                                        >
+                                            <i
+                                                class="fa fa-cart-plus text-lg text-white"
+                                            ></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer
+            class="footer-cart fixed z-40 bottom-0 align-middle justify-center h-14 w-full bg-[#ff3131] hover:bg-red-700 transition delay-80"
+        >
+            <button
+                id="CartBn"
+                class="button-your-cart flex items-center justify-center gap-x-1 font-bold"
+            >
+                <span id="CartAccount" class="text-white">(0)</span>
+                <p class="text-white font-bold text-sm">Veja meu carrinho</p>
+                <i class="fa fa-cart-plus text-white"></i>
+            </button>
+        </footer>
+
+        <section
+            class="bg-black/50 modal-cart w-full h-full fixed top-0 left-0 justify-center items-center z-[100] hidden"
+        >
+            <div class="bg-white rounded-md p-5 min-w-[90%] lg:min-w-[40.8rem]">
+                <h2 class="font-bold text-2xl text-center mb-4">
+                    Seu carrinho
+                </h2>
+                <div id="CartItems" class="flex justify-between mb-2 flex-col">
+                    <h5 class="font-bold text-lg mb-2">Chesse Burguer</h5>
+                    <p class="text-base mb-2">Quantidade (2)</p>
+                    <p class="text-base mb-2">R$ 32.90</p>
+
+                    <p class="font-bold">
+                        Total: <span id="CartTotal">0.00</span>
+                    </p>
+                    <p class="text-base">remover</p>
+
+                    <p class="font-bold mt-4 mb-1">Endereço de Entrega:</p>
+                    <input
+                        type="text"
+                        name="address"
+                        id="Address"
+                        placeholder="Digite seu endereço completo..."
+                        class="w-full border-2 p-1 rounded my-1"
+                    />
+                    <p id="AddressWarning" class="text-red-500 hidden">
+                        Digite seu endereço completo!
+                    </p>
+
+                    <div class="flex justify-between mt-7">
+                        <button
+                            id="closeModalBtn"
+                            class="hover:text-red-600 transition delay-80"
+                        >
+                            Fechar
+                        </button>
+                        <button
+                            id="checkoutBtn"
+                            class="finally-cart text-base lg:text-lg text-white text-center rounded-lg px-4 py-1 bg-[#54CC0A] hover:bg-green-600 active:bg-green-800 focus:outline-none focus:ring focus:ring-green-400 transition delay-80"
+                        >
+                            Finalizar pedido
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
