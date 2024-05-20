@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const AddressWarning = document.getElementById('AddressWarning')
     const checkoutBtn = document.getElementById('checkoutBtn')
 
+    let cart = []
+
     CartBtn.addEventListener('click', function () {
         ModalCart.style.display = 'flex'
     })
@@ -30,8 +32,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (parentButton) {
             const name = parentButton.getAttribute('data-name')
-            const price = parentButton.getAttribute('data-price')
-            console.log(name, price)
+            const price = parseFloat(parentButton.getAttribute('data-price'))
+
+            addToCart(name, price)
         }
     })
+
+    function addToCart(name, price) {
+        const existingItem = cart.find(item => item.name === name)
+
+        if (existingItem) {
+            existingItem.quantity += 1
+            console.log(cart)
+        } else {
+            cart.push({
+                name,
+                price,
+                quantity: 1
+            })
+
+            console.log(cart)
+        }
+    }
 })
