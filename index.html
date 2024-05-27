@@ -523,22 +523,17 @@
 
         <section
             id="ModalCart"
-            class="bg-black/50 modal-cart w-full h-full fixed top-0 left-0 justify-center items-center z-[100] hidden"
+            class="bg-black/50 modal-cart w-full h-full fixed top-0 left-0 justify-center items-center z-[100] hidden overflow-y-scroll"
         >
             <div class="bg-white rounded-md p-5 min-w-[90%] lg:min-w-[40.8rem]">
                 <h2 class="font-bold text-2xl text-center mb-4">
                     Seu carrinho
                 </h2>
-                <div id="CartItems" class="flex justify-between mb-2 flex-col">
-                    <h5 class="font-bold text-lg mb-2">Chesse Burguer</h5>
-                    <p class="text-base mb-2">Quantidade (2)</p>
-                    <p class="text-base mb-2">R$ 32.90</p>
-
-                    <p class="font-bold">
-                        Total: <span id="CartTotal">0.00</span>
-                    </p>
-                    <p class="text-base">remover</p>
-
+                <div
+                    id="CartItemsContainer"
+                    class="flex justify-between mb-2 flex-col"
+                ></div>
+                <div>
                     <p class="font-bold mt-4 mb-1">Endereço de Entrega:</p>
                     <input
                         type="text"

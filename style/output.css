@@ -768,6 +768,10 @@ video {
   row-gap: 2.25rem;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
