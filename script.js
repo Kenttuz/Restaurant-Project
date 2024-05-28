@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 price,
                 quantity: 1
             })
-            console.log('aqui')
         }
         updateCartModal()
     }
@@ -62,36 +61,51 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateCartModal() {
         CartItemsContainer.innerHTML = ''
         let total = 0
+        let account = 0
 
         cart.forEach(item => {
             total += item.price * item.quantity
-
+            account += item.quantity
             const cartItemElement = document.createElement('div')
             cartItemElement.className = 'flex justify-between mb-2 flex-col'
             cartItemElement.innerHTML = `
-                <h5 class="font-bold text-lg mb-2">${item.name}</h5>
-                <p class="text-base mb-2">Quantidade: ${item.quantity}</p>
-                <p class="text-base mb-2">R$${(
-                    item.price * item.quantity
-                ).toFixed(2)}</p>
-                <button class="text-base text-red-500" onclick="removeFromCart('${
-                    item.name
-                }')">remover</button>
+                <div>
+                    <div>
+                        <h5 class="font-medium text-lg mb-2">${item.name}</h5>
+                    <div class="flex justify-between align-middle mb-2">   
+                        <p class="text-base">(Quantidade: ${item.quantity})</p>
+                        <button class="remove-from-cart-btn text-base text-red-500" data-name="${
+                            item.name
+                        }">remover</button>
+                    </div>
+                    <p class="text-base mb-2">R$${(
+                        item.price * item.quantity
+                    ).toFixed(2)}</p>
+                </div>
             `
 
             CartItemsContainer.appendChild(cartItemElement)
         })
+        CartAccount.textContent = account
+        CartTotal.textContent = total.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        })
     }
 
-    window.removeFromCart = function (name) {
-        const itemIndex = cart.findIndex(item => item.name === name)
-        if (itemIndex > -1) {
-            const item = cart[itemIndex]
-            item.quantity -= 1
-            if (item.quantity === 0) {
-                cart.splice(itemIndex, 1)
+    CartItemsContainer.addEventListener('click', function (event) {
+        if (event.target.classList.contains('remove-from-cart-btn')) {
+            const name = event.target.getAttribute('data-name')
+
+            const itemIndex = cart.findIndex(item => item.name === name)
+            if (itemIndex > -1) {
+                const item = cart[itemIndex]
+                item.quantity -= 1
+                if (item.quantity === 0) {
+                    cart.splice(itemIndex, 1)
+                }
             }
         }
         updateCartModal()
-    }
+    })
 })

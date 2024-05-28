@@ -515,7 +515,9 @@
                 id="CartBtn"
                 class="button-your-cart flex items-center justify-center gap-x-1 font-bold"
             >
-                <span id="CartAccount" class="text-white">(0)</span>
+                <span class="text-white">(</span
+                ><span id="CartAccount" class="text-white">0</span
+                ><span class="text-white">)</span>
                 <p class="text-white font-bold text-sm">Veja meu carrinho</p>
                 <i class="fa fa-cart-plus text-white"></i>
             </button>
@@ -533,6 +535,7 @@
                     id="CartItemsContainer"
                     class="flex justify-between mb-2 flex-col"
                 ></div>
+                <p class="font-bold">Total: <span id="CartTotal">0.00</span></p>
                 <div>
                     <p class="font-bold mt-4 mb-1">Endereço de Entrega:</p>
                     <input
