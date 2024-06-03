@@ -43,11 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 openDays.includes(currentDay)
             )
         }
-
-        setInterval(dateControl, 60000)
     }
 
     dateControl()
+    setInterval(dateControl, 60000)
 
     CartBtn.addEventListener('click', function () {
         ModalCart.style.display = 'flex'
@@ -175,9 +174,19 @@ document.addEventListener('DOMContentLoaded', function () {
             return
         }
         if (!isOpen) {
-            alert(
-                'RESTAURANTE FECHADO! Horário de funcionamento: Segunda-Feira a Domingo - 10:00 às 22:00'
-            )
+            Toastify({
+                text: 'LOJA FECHADA NO MOMENTO! Horário de funcionamento: Seg a Dom - 10:00 às 22:00',
+                duration: 5000,
+                newWindow: true,
+                close: true,
+                gravity: 'top',
+                position: 'center',
+                stopOnFocus: true,
+                style: {
+                    background: 'linear-gradient(to right, #ff1919, #6a0000)'
+                },
+                onClick: function () {}
+            }).showToast()
             return
         }
 
