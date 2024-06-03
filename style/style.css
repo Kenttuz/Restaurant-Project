@@ -50,9 +50,6 @@ body .banner-header {
     background-image: url("./../../assets/images/bg-mobile.png");
   }
 }
-body .banner-header #opening-hours {
-  background: #54cc0a;
-}
 body .footer-cart .button-your-cart {
   width: 100%;
   height: 100%;
